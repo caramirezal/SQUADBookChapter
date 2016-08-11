@@ -1,6 +1,7 @@
 # This script exemplifies the implementation of regulatory networks using SQUAD.
 
 library(BoolNet)
+library(deSolve)
 
 # Simulation of the regulatory network defined in figure 1 as a discrete model using BoolNet R package
 
