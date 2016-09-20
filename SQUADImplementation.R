@@ -2,6 +2,8 @@
 
 library(BoolNet)
 library(deSolve)
+library(ggplot2)
+library(reshape2)
 
 # Simulation of the regulatory network defined in figure 1 as a discrete model using BoolNet R package
 
@@ -22,8 +24,8 @@ plotSequence(net,initialState)
 parameters <- c(h = 50,gamma = 1)
 
 # define SQUAD generic function
-SQUAD<-function(w,gamma,h){
-  val<- ((-exp(0.5*h) + exp(-h*(interaction(x)-0.5))) / ((1-exp(0.5*h)) * (1+exp(-h*(interaction(x)-0.5))))) - (gamma*x)
+SQUAD<-function(x,w,gamma,h){
+  val<- ((-exp(0.5*h) + exp(-h*(w-0.5))) / ((1-exp(0.5*h)) * (1+exp(-h*(w-0.5))))) - (gamma*x)
   return(val)
 }
 
@@ -33,10 +35,10 @@ squadInteractions<-function(times,state,parameters) {
     w_A <- A
     w_B <- min(A,1-C)
     w_C <- 1 - max(A,B)
-    A <- SQUAD(w_A,gamma,h)
-    B <- SQUAD(w_B,gamma,h)
-    C <- SQUAD(w_C,gamma,h)
-    return(list(c(A,B,C)))
+    dA <- SQUAD(A,w_A,gamma,h)
+    dB <- SQUAD(B,w_B,gamma,h)
+    dC <- SQUAD(C,w_C,gamma,h)
+    return(list(c(dA,dB,dC)))
   })
 }
 
@@ -45,7 +47,11 @@ times<-seq(0,10,0.01)
 
 # simulate the same trajectory but in a continuous manner
 result<-ode(y=initialState,times=times,func=squadInteractions,parms = parameters,atol=10e-6, rtol=10e-6)
-result
+result.df<-result.df<-melt(as.data.frame(result), id.vars="time")
+# plot the results
+plot<-qplot(time, value, data=result.df, colour=variable)
+plot<-plot+labs(colour="Nodes", y="Activation level")
+plot
 
 
 
