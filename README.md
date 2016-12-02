@@ -1,6 +1,6 @@
 #SQUAD Book chapter
 
-This script exemplifies the implementation of the Standardized Qualitative Analysis of Dynamics (SQUAD) method.
+This project exemplifies the implementation of the Standardized Qualitative Analysis of Dynamics (SQUAD) method.
 
 *CartoonNetwork.R* file define the regulatory network comprising three nodes *A*,*B* and *C* shown in Figure 1 from the book Chapter.
 
