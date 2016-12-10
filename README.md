@@ -2,7 +2,7 @@
 
 This project exemplifies the implementation of the Standardized Qualitative Analysis of Dynamics (SQUAD) method.
 
-*CartoonNetwork.R* file define the regulatory network comprising three nodes *A*,*B* and *C* shown in Figure 1 from the book Chapter.
+*CartoonNetwork.R* file defines the regulatory network comprising three nodes *A*,*B* and *C* shown in Figure 1 from the book Chapter in BoolNet format.
 
 *SQUADTransformation.ipynb* file exemplifies the simulation of the regulatory network model defined in the *CartoonNetwork.R* file, first as a boolean regulatory network model, and then as a continuous regulatory network using the SQUAD method. 
 
