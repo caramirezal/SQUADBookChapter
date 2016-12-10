@@ -10,7 +10,8 @@ This project exemplifies the implementation of the Standardized Qualitative Anal
 
 *animation.gif* shows an animation of the figure 3 that allows to see the direction of the flow of the states of the network at different rotation angles.
 
-References
+
+**References**
 
 Di Cara, A., Garg, A., De Micheli, G., Xenarios, I., & Mendoza, L. (2007). Dynamic simulation of regulatory networks using SQUAD. BMC Bioinformatics, 8(1), 462. http://doi.org/10.1186/1471-2105-8-462
 
