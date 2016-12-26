@@ -1,6 +1,6 @@
 #SQUAD Book chapter
 
-This project exemplifies the implementation of the Standardized Qualitative Analysis of Dynamics (SQUAD) method as defined in Di Cara *et al*, 2007 and later modified in Martínez-Sosa *et al*, 2013.
+This project exemplifies the implementation of the Standardized Qualitative Analysis of Dynamics (SQUAD) method as defined in Di Cara *et al*, 2007 and later modified in Martínez-Sosa *et al*, 2013. Regulatory network modeling approaches has been shown to be a valuable tool to study the way cells integrate signals that control biological processes. One of these approaches is the SQUAD method, which approximates a Boolean network with the use of a set of ordinary differential equations. The main benefit of the SQUAD method over purely Boolean approaches is the possibility of evaluating the effect of continuous external signals, which are pervasive in biological phenomena.
 
 *CartoonNetwork.R* file defines the regulatory network comprising three nodes *A*,*B* and *C* shown in Figure 1 from the book Chapter in BoolNet format.
 
