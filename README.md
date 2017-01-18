@@ -6,9 +6,9 @@ This project exemplifies the implementation of the Standardized Qualitative Anal
 
 *SQUADTransformation.ipynb* file exemplifies the simulation of the regulatory network model defined in the *CartoonNetwork.R* file, first as a boolean regulatory network model, and then as a continuous regulatory network using the SQUAD method. 
 
-*SQUAD_implementation.ipynb* contains a tutorial for implementing node perturbations with the SQUAD methodology. It presents the code used to make the figure 5.
+*SQUAD_implementation.ipynb* contains a tutorial for implementing node perturbations with the SQUAD methodology. It presents the code used to make the examples in Figure 4 (simulating external perturbations) and Figure 5 (simulating B lymphocyte differentiation), respectively.
 
-*animation.gif* shows an animation of the figure 3 that allows to see the direction of the flow of the states of the network at different rotation angles.
+*animation.gif* shows an animation of the Figure 3 that allows to see the direction of the flow of the states of the network at different rotation angles.
 
 
 **References**
